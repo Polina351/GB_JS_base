@@ -16,7 +16,7 @@ const maxNumber = function(num1, num2, num3) {
     if (num3 > max) max = num3;
 
     return max;
-}
+};
 
 const num1 = Number(prompt('Введите первое число'));
 const num2 = Number(prompt('Введите второе число'));
