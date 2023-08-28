@@ -16,10 +16,10 @@
 
 console.log('---------------------');
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+const getRandomInt = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
 
 const getArray = function(sizeArray, minValue, maxValue) {
-    let array = [];
+    const array = [];
     for (let i = 0; i < sizeArray; i++) {
         array.push(getRandomInt(minValue, maxValue));
     }

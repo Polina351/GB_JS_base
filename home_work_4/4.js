@@ -15,7 +15,7 @@ xxxxx
 console.log('---------------------');
 
 function printSlide(height) {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < height; i++) {
         let str= '';
         for (let j = 0; j <= i; j++) {
             str += 'x';
