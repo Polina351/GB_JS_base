@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.users {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.user {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 200px;
+    border: 1px solid black;
+}
+.value {
+    color: blue;
+}
+.btn {
+    margin-top: 10px;
+    align-self: center;
+}
