@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--Создать страницу, которая спрашивает у пользователя 2 числа, и действие, которое необходимо совершить с этими числами(*, -, +, /). Выполнить задание через конструкцию switch-case.-->
+<script>
+
+    const num1 = getNumber();
+    const num2 = getNumber();
+    const operation = getOperation();
+    const result = calculate(num1, num2, operation);
+    alert(`${num1} ${operation} ${num2} = ${result}`);
+
+    function getNumber() {
+        let number = +prompt('Введите число');
+        if (Number.isFinite(number)) {
+            return number;
+        }
+        alert('Это не число, попробуй снова')
+        return getNumber();
+    }
+    function getOperation() {
+        let operation = prompt('Введите действие: + - / *');
+        if (operation === '+' || operation === '-' || operation === '/' || operation === '*' ) {
+            return operation;
+        }
+        alert('Необходимо выбрать одно из действий: + - / *')
+        return getOperation();
+    }
+    function calculate(num1, num2, operation) {
+        switch (operation) {
+            case '+':
+                return num1 + num2;
+            case '-':
+                return num1 - num2;
+            case '/':
+                return num1 / num2;
+            case '*':
+                return num1 * num2;
+        }
+    }
+
+</script>
+</body>
+</html>
