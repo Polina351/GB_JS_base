@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.about {
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+.subtitle-box {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.subtitle {
+    color: #0C0C0E;
+    font-family: Forum;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+.subtitle::after {
+    content: '';
+    display: block;
+    margin: 20px auto 0;
+    height: 1px;
+    background: #0C0C0E;
+    width: 50px;
+}
+.about__text {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.corausel-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+.carret {
+    display: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.carret.inactiv {
+    cursor: auto;
+}
+.carret.inactiv:hover {
+    background-color: rgba(0,0,0,0);
+}
+.carret:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+.corausel {
+    width: 1400px;
+    margin-bottom: 35px;
+    height: 561px;
+    overflow: hidden;
+}
+.image-box {
+    position: relative;
+    gap: 25px;
+    display: flex;
+    height: 560px;
+    width: 2350px;
+    right: 0px;
+    transition: all ease 1s;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+.pagination__elem-box {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    padding: 5px;
+}
+.pagination__elem-box.disabled {
+    cursor: auto;
+}
+.pagination__elem {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #0C0C0E;
+}
+.pagination .pagination__elem-box:nth-child(n + 4) {
+    display: none;
+}
+.pagination__elem.activ, .pagination__elem-box:hover .pagination__elem {
+    background-color: #BB945F;
+    transition: all 0.3s;
+}
+
+@media (max-width: 1420px) {
+    .carret {
+        display: flex;
+    }
+    .pagination .pagination__elem-box:nth-child(n + 4) {
+        display: block;
+    }
+    .corausel {
+        width: 450px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .corausel-box {
+        gap: 58px;
+    }
+    .corausel {
+        margin-bottom: 20px;
+    }
+}
