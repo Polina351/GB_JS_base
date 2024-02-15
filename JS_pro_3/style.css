@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #E1D4C9;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+}
+.main {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+/*modal*/
+.modal_bg.open {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+.modal_bg {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+.modal.open {
+    position: fixed;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 3;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+    width: 500px;
+    height: 300px;
+    border-radius: 40px;
+    color: #403F3D;
+}
+.modal {
+    background-color: #FFFEFE;
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.5s all;
+}
+.modal-btn, .btn {
+    background-color: #E1D4C9;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 5px;
+    transition: 0.3s all;
+}
+.modal-btn:hover, .btn:hover {
+    background-color: #909090;
+}
+.review_product {
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #403F3D;
+}
+.name_product {
+    width: 300px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #403F3D;
+}
+.review_product::placeholder {
+    font-size: 20px;
+    font-weight: bold;
+}
+.name_product:focus, .review_product:focus {
+    border-width: 2px;
+}
+.list_product, .list_review {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.li {
+    list-style-type: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text {
+    width: 300px;
+}
