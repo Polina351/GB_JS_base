@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #E1D4C9;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.title {
+    margin: 20px;
+}
+.flex {
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+path {
+    cursor: pointer;
+    fill: #5E5B5BE5;
+}
+path.like {
+    fill: #F30303FF;
+}
